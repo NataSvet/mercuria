@@ -1,2 +1,2 @@
-# mercurial-git
+# mercuria
 mercurial
