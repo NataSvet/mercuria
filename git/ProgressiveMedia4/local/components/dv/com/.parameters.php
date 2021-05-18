@@ -5,19 +5,20 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 if(!CModule::IncludeModule("iblock"))
 	return;
 
-$arTypesEx = CIBlockParameters::GetIBlockTypes(array("-"=>" "));
+//$arTypesEx = CIBlockParameters::GetIBlockTypes(array("-"=>" "));
 
-$arIBlocks=array();
+/*$arIBlocks=array();
 $db_iblock = CIBlock::GetList(array("SORT"=>"ASC"), array("SITE_ID"=>$_REQUEST["site"], "TYPE" => ($arCurrentValues["IBLOCK_TYPE"]!="-"?$arCurrentValues["IBLOCK_TYPE"]:"")));
 while($arRes = $db_iblock->Fetch())
-	$arIBlocks[$arRes["ID"]] = "[".$arRes["ID"]."] ".$arRes["NAME"];
+	$arIBlocks[$arRes["ID"]] = "[".$arRes["ID"]."] ".$arRes["NAME"];*/
+
 
 $arSorts = array("DESC"=>GetMessage("T_IBLOCK_DESC_DESC"));
 $arSortFields = array(
 		"ACTIVE_FROM"=>GetMessage("T_IBLOCK_DESC_FACT")
 	);
 
-$arProperty_LNS = array();
+/*$arProperty_LNS = array();
 $rsProp = CIBlockProperty::GetList(array("sort"=>"asc", "name"=>"asc"), array("ACTIVE"=>"Y", "IBLOCK_ID"=>(isset($arCurrentValues["IBLOCK_ID"])?$arCurrentValues["IBLOCK_ID"]:$arCurrentValues["ID"])));
 while ($arr=$rsProp->Fetch())
 {
@@ -26,7 +27,7 @@ while ($arr=$rsProp->Fetch())
 	{
 		$arProperty_LNS[$arr["CODE"]] = "[".$arr["CODE"]."] ".$arr["NAME"];
 	}
-}
+}*/
 $typeCom=array("инфоблок", "странница");
 $arComponentParameters["PARAMETERS"]=array();
 $arComponentParameters = array(
