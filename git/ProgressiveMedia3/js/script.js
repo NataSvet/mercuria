@@ -3,7 +3,7 @@ let button = document.querySelector(".button");
 let input = document.querySelector(".form__input-count");
 let box_drag = document.querySelector('.box-drag');
 function setAsDraggable() {
-    //containment: ограничивает движение только в в блоке можно убрать и будет по всей странице
+    //containment: ограничивает движение только в блоке можно убрать и будет по всей странице
     $(".draggable" ).draggable({
         containment: $( ".box-drag")
     });
